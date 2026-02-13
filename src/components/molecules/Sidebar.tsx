@@ -123,9 +123,9 @@ export default function Sidebar() {
 
   const groupedNavItems = navItems.reduce<Record<string, NavItem[]>>(
     (groups, item, index) => {
-      if (roleId !== 1 && (index === 3 || index === 4)) {
-        return groups;
-      }
+      // if (roleId !== 1 && (index === 3 || index === 4)) {
+      //   return groups;
+      // }
 
       if (!groups[item.separator]) {
         groups[item.separator] = [];

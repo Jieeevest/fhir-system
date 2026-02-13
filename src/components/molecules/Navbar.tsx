@@ -74,30 +74,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 pt-4">
           {/* Left Section: Breadcrumbs */}
-          <div className="flex items-center space-x-2 font-normal text-sm">
-            <Link href="/workspace/dashboard" className="hover:font-semibold">
-              Home
-            </Link>
-            {pathSegments
-              .filter(
-                (segment) => segment !== "workspace" && isNaN(Number(segment))
-              ) // Exclude 'workspace' and numeric segments
-              .map((segment, index) => {
-                const href = "/" + pathSegments.slice(0, index + 2).join("/");
-                const formattedSegment =
-                  segment.charAt(0).toUpperCase() +
-                  segment.slice(1).replace(/-/g, " ");
-
-                return (
-                  <div key={href} className="flex items-center space-x-2">
-                    <span className="text-gray-400"> &gt; </span>
-                    <Link href={href} className={` hover:font-semibold`}>
-                      {formattedSegment}
-                    </Link>
-                  </div>
-                );
-              })}
-          </div>
+          <div className="flex items-center space-x-2 font-normal text-sm"></div>
 
           {/* Right Section: Name with Dropdown */}
           <div
@@ -148,15 +125,6 @@ const Navbar: React.FC = () => {
                         </span>
                         <p className="text-gray-700 text-xs">{user.email}</p>
                       </div>
-                    </div>
-                  </Link>
-                  <Link
-                    href="#"
-                    className="px-4 py-2 font-semibold text-sm hover:bg-gray-100 cursor-not-allowed"
-                  >
-                    <div className="flex space-x-2 py-2 items-center gap-2">
-                      <i className="ki-outline ki-setting-2 text-xl" />
-                      Settings
                     </div>
                   </Link>
                   <div

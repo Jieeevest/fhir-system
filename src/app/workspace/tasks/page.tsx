@@ -98,7 +98,7 @@ export default function TasksPage() {
           {/* Summary Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {/* Pending Card */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-300 p-6">
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800 mb-2">
                   {pendingCount}
@@ -108,7 +108,7 @@ export default function TasksPage() {
             </div>
 
             {/* In Progress Card */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-300 p-6">
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800 mb-2">
                   {inProgressCount}
@@ -120,7 +120,7 @@ export default function TasksPage() {
             </div>
 
             {/* Completed Card */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-300 p-6">
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800 mb-2">
                   {completedCount}
@@ -133,29 +133,29 @@ export default function TasksPage() {
           </div>
 
           {/* Pending Task Table */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-300 p-6">
             <h2 className="text-lg font-semibold text-gray-800 mb-6">
               Pending Task
             </h2>
 
             {/* Table */}
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
+            <div className="overflow-x-auto rounded-lg">
+              <table className="min-w-full divide-y border border-gray-300 divide-gray-200">
+                <thead className="bg-gray-50 p-4">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                       Task
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                       Patient
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                       Priority
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                       Due Date
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                       Status
                     </th>
                   </tr>
