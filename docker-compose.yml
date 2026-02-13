@@ -1,0 +1,15 @@
+version: "2"
+services:
+  backoffice-frontend:
+    image: localhost/backoffice-frontend:1.0.0
+    build: .
+    container_name: backoffice-frontend
+    restart: unless-stopped
+    volumes:
+      - ./.env:/app/env:ro
+      - ./src:/app/src
+    ports:
+      - "5050:5050"
+networks:
+  db:
+    external: true
